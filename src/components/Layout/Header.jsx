@@ -19,8 +19,8 @@ const Header = ({ title, showCart = false, cartCount = 0, onCartClick }) => {
 
   return (
     <header className="glass-morphism border-b border-black/10 dark:border-white/15 sticky top-0 z-30 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20 py-4 sm:py-6">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20 sm:h-24 py-6 sm:py-8">
           
           {/* Left Side: Logo and Brand */}
           <div className="flex items-center">

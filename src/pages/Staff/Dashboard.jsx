@@ -411,9 +411,7 @@ const StaffDashboard = () => {
 
   return (
     <div className="min-h-screen modern-gradient transition-colors duration-200 flex flex-col">
-      <div className="py-4 sm:py-6">
-        <Header title={`${user?.full_name || 'Staff'} Command Center`} />
-      </div>
+      <Header title={`${user?.full_name || 'Staff'} Command Center`} />
 
       {/* Toast Notifications */}
       {toasts.map((toast) => (
@@ -425,7 +423,7 @@ const StaffDashboard = () => {
         />
       ))}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-8 flex-1">
         {/* Tabs */}
         <div className="mb-6 sm:mb-8">
           <nav className="flex space-x-4 sm:space-x-8 overflow-x-auto pb-2">
@@ -455,7 +453,7 @@ const StaffDashboard = () => {
         {/* Orders Tab */}
         {activeTab === 'orders' && (
           <div className="space-y-8">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">Orders for {user?.full_name}</h2>
               <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                 <div className="glass-morphism px-3 sm:px-4 py-2 rounded-lg border border-white/20">
@@ -480,9 +478,9 @@ const StaffDashboard = () => {
                 <p className="text-gray-600 dark:text-gray-400">Orders for {user?.full_name} will appear here when students place them</p>
               </div>
             ) : (
-              <div className="grid gap-6">
+              <div className="space-y-6">
                 {orders.map((order) => (
-                  <div key={order.id} className="glass-morphism-strong rounded-xl p-4 sm:p-6">
+                  <div key={order.id} className="glass-morphism-strong rounded-xl p-4 sm:p-6 w-full">
                     <div className="flex flex-col lg:flex-row justify-between items-start mb-4 gap-4">
                       <div>
                         <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">
@@ -563,7 +561,7 @@ const StaffDashboard = () => {
         {/* Menu Tab */}
         {activeTab === 'menu' && (
           <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">Menu Items for {user?.full_name}</h2>
               <button
                 onClick={() => {
@@ -581,7 +579,7 @@ const StaffDashboard = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
               {menuItems.map((item) => (
                 <div key={item.id} className="glass-card rounded-xl overflow-hidden">
                   <img
